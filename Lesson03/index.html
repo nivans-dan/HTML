@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos HTML CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mi Universidad</h1>
+    <hr>
+    <p style="color:crimson">
+        Color por nombre
+    </p>
+    <p style="color:rgb(0, 0, 255)">
+        Color por código RGB. 255 es el mayor número en la lista.
+    </p>
+    <p style="border: 10px solid rgba(0, 0, 255, .5)">
+        Color RGB con transparencia.
+    </p>
+    <p style="color: hsl(140, 100%, 35%)">
+        Color por código HSL (Hue, Saturation, Lightness).
+    </p>
+    <p style="border: 10px solid hsla(140, 100%, 35%, .3)">
+        Color HSL con transparencia.
+    </p>
+    <p style="color: #ee82ee">
+        Color por valor Hexadecimal. Se compone de 6 dígitos y por pares. <br>
+        0 es el menor, f el valor mayor. Como va por pares es como el RGB. <br>
+        Ej: %00ff00 sería verde porque está en los espacios de Green en RGB. <br>
+        Igual puede simplificarse a fff ó 000 si se repite en cada par.
+    </p>
+    <hr>
+    <p class="estilos">
+        Color desde el nuevo archivo CSS (Cascade Style Sheet). <br>
+        Se llama así porque va desde el elemento padre al elemento hijo. <br>
+        Ej: de Body a un párrafo, 'Body' es padre y 'p' es hijo. 
+    </p>
+    <hr>
+    <p class="margin">
+        <img src="img/margin.png"> <br>
+        De esta manera se configuran los márgenes existentes en HTML.
+    </p>
+    <p class="margin">
+        Dejará espacios según lo que nosotros especifiquemos. Podemos hacer esto: <br>
+        margin(40px 10px 20px 10px) -> (top, right, bottom, left) <br>
+        De igual manera se puede simplificar como: margin(40px 10px), <br>siendo (ArribaAbajo, IzqDer).
+        <br> Si ponemos margin: auto se ajustará automáticamente a 50px.
+    </p>
+    <hr>
+    <p>
+        Existen muchas herramientas que nos ayuden con la paleta de colores para las páginas Web. <br>
+        <a href="https://coolors.co/palettes/trending" target="__blank">Este es un ejemplo de dónde podemos sacar paletas de colores.</a>
+    </p>
+</body>
+</html>

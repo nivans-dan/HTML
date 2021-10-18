@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+    <h1>Formularios en HTML</h1>
+    <hr>
+    <p>Con el method GET se pone lo enviado en el formulario en el Link (query string).</p>
+    <p>Con el method POST se manda lo enviado al formulario al servidor, así no se visualisa en el Link.</p>
+    <hr>
+    <p>Los datos que se ven en el Link/URL se codifican si son carácteres especiales, como: '@', ' ', etc.</p>
+    <hr>
+    <p>La diferencia entre checkbox y radio es que el primero se pueden seleccionar una o varias opciones, con la segunda sólo una</p>
+    <hr>
+    <!--action="" hace que mande dicha información del formulario al link que pongamos en él.-->
+    <!--target="_self" hace que se quede en la misma ventana, _blank hace que abra una nueva-->
+    <!--autocomplete hará que se autocomplete con datos que ya se habían insertado, se pone (on/off)-->
+    <form method="get" action="" target="_self" autocomplete="off">  <!--si ponemos novalidate ignorará los required que se hayan puesto-->
+        <fieldset>  <!--agrega un marco al formulario.-->
+            <legend>Datos Persona:</legend> <!--leyenda que llevará el formulario-->
+            
+            <!--readonly hace que no pueda ser modificado, es algo que se establece automaticamente-->
+            <!--disable hará que ya no se envié la información al servidor, incluso cambia su forma-->
+            <label for="idPersona">idPersona:</label> <br>
+            <input type="text" id="idPersona" name="idPersona" readonly="true" disabled="true" value="100"> <br>
+
+            <input type="hidden" name="sistema" id="sistema" value="SAP">   <!--valor que no ve el usuario, pero sí se manda al servidor-->
+            
+            <!--lo que hace for es que si le das click en Nombre: te seleccionará la caja de texto-->
+            <!--required sirve para que no pueda enviar el formulario sin llenar ese espacio-->
+            <label for="nombre">Nombre:</label> <br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true"> <br>    <!--se pueden cargar datos previos con value=""-->
+
+            <label for="apellido">Apellido:</label> <br>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true"> <br>  <!--con name saldrá en el link (query string) qué se envió-->
+
+            <!--el type="password" hará que no se muestre qué estamos escribiendo sobre esta sección-->
+            <!--
+            <label for="password">Password:</!--label> <br>
+            <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required="true"> <br>
+            -->
+
+            <label for="email">Email:</label> <br>
+            <input type="email" id="email" name="email" placeholder="Escribe tu email" required="true"> <br>
+
+            <!--al ser de type="number" aparecerán unas flechas que nos ayuden a incrementar o decrementar-->
+            <label for="edad">Edad:</label> <br>
+            <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" required="true" step="any"> <br> <!--step="any" hará que puedas enviar cualquier tipo de valor numérico.-->
+
+            <!--el name de todas las opciones deben tener le mismo nombre para que pueda elegir sólo una opción y no varias-->
+            <label>Género:</label> <br>
+            <input type="radio" name="genero" id="femenino" value="femenino">
+            <label for="femenino">Femenino</label> <br>
+            <input type="radio" name="genero" id="masculino" value="masculino">
+            <label for="masculino">Masculino</label> <br>
+
+            <label>Género Música Favorita:</label> <br>
+            <input type="checkbox" name="musica" id="clasica" value="clasica">
+            <label for="clasica">Clásica</label> <br>
+            <input type="checkbox" name="musica" id="jazz" value="jazz">
+            <label for="jazz">Jazz</label> <br>
+
+            <label for="autos">Marca Auto Favorita:</label> <br>
+            <!--multiple="true" hará que se muestren varias opciones, no sólo una-->
+            <select name="autos" id="autos">    <!--con ctrl puedes elegir más opciones (cmd para Mac)-->
+                <option value="volvo">Volvo</option>
+                <option value="bmw">BMW</option>
+                <option value="audi" selected="true">Audi</option>  <!--con selected será el primero en aparecer en la lista de opciones-->
+            </select> <br>
+
+            <label for="comentario">Comentario</label> <br>
+            <textarea name="comentario" id="comentario" cols="30" rows="2">Este es mi comentario</textarea> <br> <!--el texto que pongas aquí aparecerá tal cual en el recuadro, con tabulador, espacios, etc.-->
+
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validar">
+            <input type="reset" value="Restablecer">    <!--Reseta los valores del formulario-->
+        </fieldset>
+    </form>
+</body>
+</html>

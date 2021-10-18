@@ -1,0 +1,19 @@
+ol{
+    list-style: none;       /*quita cualquier numeración*/
+    counter-reset: contador;        /*crea una variable contador que se reinicia en cada lista*/
+}
+
+ol li{
+    counter-increment: contador;    /*incrementa en cada elemento en 1*/
+}
+
+/*pone datos o textos antes de cada elemento*/
+ol li::before{
+    content: "Curso " counter(contador) ') ';     /*pone Curso y el número y un ) al inicio*/
+    color: #ff6f00;
+}
+
+/*pone datos o textos después de cada elemento*/
+ol li::after{
+    content: '.';       /*pone un punto al final*/
+}

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*identificador (id) css*/
+#titulo_principal{
+    color: #f72585;
+    text-align: center;
+    margin: 15px;
+}
+
+h1{
+    color: #f72585;
+    text-align: center;
+    margin: 15px;
+}
+
+h2{
+    color: #3f37c9;
+}
+
+p{
+    color: #457b9d;
+}
+
+/*clase se css*/
+.tarjeta{
+    border: 10px solid #560bad;
+    background-color: #f1faee;
+    text-align: center;
+    margin: 10px 115px;
+    padding: 15px;
+}
+
+.titulo{
+    color: #f72585;
+}
+
+/*esto modifica el marco que agrega el iFrame por default*/
+.marco{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #f72585;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.boton{
+    background-color: white;
+    border: 2px solid #457b9d;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.boton:hover{
+    background-color: #457b9d;
+    color: white;
+}

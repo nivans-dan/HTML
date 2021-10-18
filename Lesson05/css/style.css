@@ -1,0 +1,37 @@
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    /*border-spacing: 5px;      Esto da espaciado a las tablas*/    
+    padding: 5px;
+}
+
+table{
+    width: 100%;
+}
+
+caption{
+    color: #e63946;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    line-height: 70px;      /*separación inferior y superior (ancho de línea)*/
+}
+
+th{
+    color: #f1faee;
+    background-color: #1d3557;
+}
+
+/*esto modifica renglones pares: even*/
+tr:nth-child(even){
+    background-color: #f1faee;
+}
+
+/*esto modifica renglones impares: odd*/
+tr:nth-child(odd){
+    background-color: #a8dadc;
+}
+
+/*por default se poner el DATA a la izquierda, pero se puede modificar como aquí
+td{     
+    text-align: center;
+}*/

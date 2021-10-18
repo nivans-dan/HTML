@@ -1,0 +1,31 @@
+h1{
+    color: #560bad;
+}
+
+/*color del link antes de haber dado click*/
+a:link{
+    background-color: #b5179e;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;      /*quita el subrayado del link*/
+}
+
+/*color del link después de haber dado click*/
+a:visited{
+    background-color: #b5179e;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;      /*quita el subrayado del link*/
+}
+
+/*cuando nos ponemos encima del link*/
+a:hover{
+    background-color: #f72585;
+}
+
+/*cuando se da click*/
+a:active{
+    background-color: #f72585;
+}
